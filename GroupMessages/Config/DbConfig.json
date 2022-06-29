@@ -1,0 +1,11 @@
+{
+  "development": {
+    "database": "groupmessage",
+    "username": "root",
+    "password": "12345678",
+    "dialectinfo": {
+      "dialect": "mysql",
+      "host": "localhost"
+    }
+  }
+}

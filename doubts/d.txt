@@ -1,0 +1,26 @@
+This method is based on the fact that the maximum and minimum of 
+the permutations subarray should be present for it to be a valid permutation
+
+An example run is gievn below
+
+A = [2, 3, 1]
+arr will be created as
+arr[1] = 0 {i=0}
+arr[2] = 1 {i=1}
+arr[0] = 2 {i=2}
+
+so arr = [2, 0, 1]
+
+mini = 3, maxi = 0, count = 0
+
+next, the for loop will execute which iterates over arr
+updates maxi and mini
+
+each time check if maxi - mini = i (iteration number)
+if it is, then all numbers in that range are present 
+and it is a valid permutation subarray
+
+mini = 2, maxi = 2, count = 1 {i=0} [UPDATE COUNT]
+mini = 0, maxi = 2, count = 1 {i=1} [DON'T UPDATE COUNT]
+mini = 0, maxi = 2, count = 2 {i=2} [UPDATE COUNT]
+exit loop and return the count 

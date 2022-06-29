@@ -1,0 +1,11 @@
+{
+  "development": {
+    "database": "Message",
+    "username": "root",
+    "password": "12345678",
+    "dialectinfo": {
+      "dialect": "mysql",
+      "host": "localhost"
+    }
+  }
+}

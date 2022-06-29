@@ -1,0 +1,38 @@
+URL shortener:
+
+ - Design a URL shortner that will return a shortened URL for a given URL (uniform resource locator).
+ - This is useful because it can become cumbersome to share long URLs. 
+
+    Example - 
+    "https://www.google.com/search?q=long+url&oq=long+url&aqs=chrome..69i57j0i512l6j0i131i433i512j46i512j0i512.1692j0j7&sourceid=chrome&ie=UTF-8"
+    "shorturl.at/fySY0"
+
+
+ - Common services include https://bit.ly etc.
+
+ Key features of a URL shortener - 
+ - The returned URL should be shorter than the input URL.
+ - No two short URLs should point to the same longURL
+
+
+
+   "shortUrl1" ->  
+                    "longURL1"
+   "shortUrl2" ->
+
+ - No two long URLs should point to the same shortURL
+
+ 
+   "longUrl1" <-  
+                    "shortURL1"
+   "longUrl2" <-
+
+- There should be a one to one mapping from shortURL to longURL.
+
+How does the URL shortener work after shortening:
+
+
+Client                  ->    URL shortener service gets the request   -> Target server will get the request
+(User pastes the short           { "shortURL1": "longURL1"   } 
+URL in the browser)              The service checks its database
+                                 and redirects to the actual server 
