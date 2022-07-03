@@ -179,6 +179,8 @@ var palindromePairs = function (words) {
   for (let i = 0; i < words.length; i++) {
     for (let j = 0; j < words[i].length; j++) {
       let s = words[i];
+      // "abcde" -> s.substr(0, 3) -> "abc"
+      //         -> s.substr(3)
       let left = s.substr(0, j); // prefix
       let right = s.substr(j, s.length - j); // suffix
       //  console.log(left,right);
@@ -190,6 +192,10 @@ var palindromePairs = function (words) {
       // Map.has() -> true
       // indx = {"ab": 0, "ui": 1}
       // index.has("ab") = true
+      // ["aa", "cd"]
+      // {"aa": 0, "cd": 1}
+      // "aa" + "aa" = "aaaa"
+      // ""
       if (index.has(left) && index.get(left) !== i && ispalindrome(right)) {
         ans.push([i, index.get(left)]);
       }

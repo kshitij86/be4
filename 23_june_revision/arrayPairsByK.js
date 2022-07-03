@@ -263,7 +263,8 @@ var countPairs = function (nums, k) {
     // nums[i] = 4, k = 2, gcd = 2
     let gcdOfNo1 = gcd(nums[i], k);
     // iterating over the map
-    // gcdMap = {1: 1, 2: 3}
+    // gcdMap = {1: 1, 2: 3} -> [[1, 1], [2, 3]]
+    // for const[key, value] of
     for (const [gcdOfNo2, cnt] of Object.entries(gcdMap)) {
       if ((gcdOfNo1 * gcdOfNo2) % k == 0) {
         // there is a pair with product div by k
